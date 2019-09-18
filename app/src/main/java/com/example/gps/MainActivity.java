@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
         }
 
         // Location 情報の更新
-        locationManager.requestLocationUpdates(android.location.LocationManager.GPS_PROVIDER, 0, 0, lmg);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, lmg);
     }
     /**
      * スワイプイベントなどの処理
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
             if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
         }
     }
 
